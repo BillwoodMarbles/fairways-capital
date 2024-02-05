@@ -1,0 +1,33 @@
+---
+const { variant }: { variant: 'clip' | 'bar' } = Astro.props
+---
+
+<div class={`${variant === 'bar' ? 'h-1' : 'clip h-6'} gold`}></div>
+
+<style>
+  .gold {
+    background-image: linear-gradient(
+      to right,
+      #ca8a04,
+      #ca8a04,
+      #fde68a,
+      #ca8a04,
+      #ca8a04,
+      #ca8a04,
+      #fcd34d,
+      #ca8a04
+    );
+  }
+
+  .clip {
+    clip-path: polygon(
+      0 0,
+      0 4px,
+      calc(50% - 10px) 4px,
+      50% 100%,
+      calc(50% + 10px) 4px,
+      100% 4px,
+      100% 0
+    );
+  }
+</style>
