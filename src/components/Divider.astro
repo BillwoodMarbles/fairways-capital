@@ -1,5 +1,5 @@
 ---
-const { variant }: { variant: 'clip' | 'bar' } = Astro.props
+const { variant } = Astro.props
 ---
 
 <div class={`${variant === 'bar' ? 'h-1' : 'clip h-6'} gold`}></div>
